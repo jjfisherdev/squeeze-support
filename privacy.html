@@ -21,8 +21,9 @@
 <body>
 <main>
   <h1>Squeeze — Privacy Policy</h1>
-  <!-- Rewritten for Squeeze 2.0 (ads for every player, age assurance). Covers 1.x too: same address. -->
-  <p class="tag">Effective October 17, 2026</p>
+  <!-- Rewritten for Squeeze 2.0 (ads for every player, age assurance). Covers 1.x too: same address.
+       Updated for 2.1: settings file, optional rewarded ads, local reminders, Daily share, on-device streak data. -->
+  <p class="tag">Effective October 23, 2026</p>
 
   <h2>The short version</h2>
   <p><strong>Squeeze itself collects nothing about you.</strong> There are no
@@ -30,11 +31,18 @@
   version 2.0, Squeeze shows an occasional ad between rounds and at the end of a
   match through Google AdMob, which receives limited device data to deliver those
   ads. Ads are non-personalized, Squeeze never asks to track you, and nothing is
-  for sale inside the app. Versions before 2.0 show no ads and contain no ad
-  software.</p>
+  for sale inside the app. From version 2.1, Squeeze also downloads a small
+  settings file from this website when it starts, can play an ad you choose to
+  watch for a reward, and, only if you ask for them, reminds you about the Daily
+  Question with notifications scheduled on your device. Versions before 2.0 show
+  no ads and contain no ad software.</p>
 
   <h2>Advertising (Google AdMob)</h2>
-  <p>The Google Mobile Ads SDK runs inside the app. To show and measure ads and to
+  <p>The Google Mobile Ads SDK runs inside the app. From version 2.1 you can also
+  choose to watch a rewarded ad (to repair a streak, for an extra Rain Check, or to
+  change the question again): it plays only when you tap a button marked AD, and it
+  uses the same Google SDK, the same non-personalized settings and the same kinds of
+  data as the ads between rounds. To show and measure ads and to
   prevent fraud, Google may receive your IP address (which indicates your
   approximate location), device identifiers, information about the ads you see and
   tap, and app diagnostics such as crash and performance data. Squeeze requests
@@ -47,6 +55,32 @@
   <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
   <a href="https://policies.google.com/technologies/partner-sites">How Google uses
   information from sites or apps that use its services</a>.</p>
+
+  <h2>Settings file (version 2.1 and later)</h2>
+  <p>When Squeeze starts, it downloads a small settings file from this website
+  (<a href="config/v1.json">jjfisherdev.github.io/squeeze-support/config/v1.json</a>)
+  that can switch features on or off and tune the game, such as the Daily Question
+  or how streaks work. The request contains no identifier, no account and nothing
+  about you or your games. As with any website, the site’s host, GitHub, receives
+  your device’s IP address and standard request information (such as the time of the
+  request) to deliver the file, and may keep them in its logs for security under the
+  <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub
+  General Privacy Statement</a>. We do not receive those logs. If the download fails,
+  Squeeze simply uses its built-in settings.</p>
+
+  <h2>Reminders (optional, version 2.1 and later)</h2>
+  <p>After your first Daily Question, Squeeze asks whether you would like a reminder;
+  iOS asks for notification permission only if you say yes. Reminders are local
+  notifications: Squeeze schedules them on your device, with that day’s question as
+  the text, at most one a day and never between 10 p.m. and 8 a.m. No push service or
+  server is involved and nothing is sent anywhere. Turn them off with the bell on the
+  home screen or in iOS Settings.</p>
+
+  <h2>Sharing your Daily Question result</h2>
+  <p>SHARE opens Apple’s share sheet with one line of text, for example
+  “Squeeze Daily #12 · inside ±8% · 🔥 5”: your result and your streak, never the
+  answer. You choose where it goes, or cancel. Squeeze itself sends nothing and
+  receives nothing.</p>
 
   <h2>Age assurance</h2>
   <p>Some places require apps to respect a player’s age and a parent’s approval
@@ -71,9 +105,14 @@
   <h2>Data stored on your device</h2>
   <p>Squeeze keeps a small amount of data locally so the game works: your language,
   your Random or Near You choice and match length, whether you have watched the
-  demo round, the counters that space out ads (matches played, rounds since the
+  demo round (and, from version 2.1, whether the app was newly downloaded or updated
+  from an earlier version, so an update never replays it), the counters that space out ads (matches played, rounds since the
   last ad, the time of the last ad) and, where age assurance applies, whether a
-  parent approved ads. This data stays on your device, is not backed up by us
+  parent approved ads. From version 2.1 it also keeps your streak, Rain Checks and
+  Daily Question results, whether you play two players or against the dog and the
+  dog’s level, an estimate of how close your guesses usually land (so the dog can
+  play you fairly), the usual time you play the Daily (to time reminders), your
+  reminder choice and the last settings file. This data stays on your device, is not backed up by us
   anywhere, and is removed entirely when you delete the app.</p>
 
   <h2>Versions before 2.0</h2>
@@ -85,7 +124,8 @@
 
   <h2>Third parties</h2>
   <p>From version 2.0, Squeeze includes the Google Mobile Ads SDK and Google’s
-  consent tool. Age assurance uses Apple’s own on-device frameworks.</p>
+  consent tool. From version 2.1, the settings file is hosted on GitHub Pages.
+  Age assurance and reminders use Apple’s own on-device frameworks.</p>
 
   <h2>Children</h2>
   <p>Squeeze is a family game suitable for all ages, but it is not directed at

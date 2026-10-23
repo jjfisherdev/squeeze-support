@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "daily": {
+    "enabled": true,
+    "overrides": []
+  },
+  "streak": {
+    "enabled": true,
+    "rainCheckEvery": 7,
+    "rainCheckCap": 3,
+    "repairHours": 48
+  },
+  "bot": {
+    "enabled": true
+  },
+  "rewarded": {
+    "enabled": true
+  },
+  "notifications": {
+    "enabled": true
+  }
+}

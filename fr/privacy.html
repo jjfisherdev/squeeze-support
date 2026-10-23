@@ -21,8 +21,9 @@
 <body>
 <main>
   <h1>Squeeze — Politique de confidentialité</h1>
-  <!-- Réécrite pour Squeeze 2.0 (pubs pour tous, vérification de l’âge). Couvre aussi la 1.x : même adresse. -->
-  <p class="tag">En vigueur le 17 octobre 2026</p>
+  <!-- Réécrite pour Squeeze 2.0 (pubs pour tous, vérification de l’âge). Couvre aussi la 1.x : même adresse.
+       Mise à jour pour la 2.1 : fichier de réglages, pubs récompensées facultatives, rappels locaux, partage, séries. -->
+  <p class="tag">En vigueur le 23 octobre 2026</p>
 
   <h2>En résumé</h2>
   <p><strong>Squeeze ne collecte rien sur toi.</strong> Pas de compte,
@@ -31,11 +32,20 @@
   publicité entre deux manches et à la fin d’un match via Google AdMob, qui reçoit
   des données limitées sur l’appareil pour diffuser ces publicités. Les publicités
   sont non personnalisées, Squeeze ne demande jamais à te suivre, et rien n’est à
-  vendre dans l’app. Les versions antérieures à la 2.0 n’affichent aucune pub et
+  vendre dans l’app. À partir de la version 2.1, Squeeze télécharge aussi
+  un petit fichier de réglages sur ce site à son lancement, peut lancer une pub que
+  tu choisis de regarder contre une récompense et, seulement si tu le demandes, te
+  rappelle la question du jour par des notifications programmées sur ton appareil.
+  Les versions antérieures à la 2.0 n’affichent aucune pub et
   ne contiennent aucun logiciel publicitaire.</p>
 
   <h2>Publicité (Google AdMob)</h2>
-  <p>Le SDK Google Mobile Ads fonctionne dans l’app. Pour afficher et mesurer les
+  <p>Le SDK Google Mobile Ads fonctionne dans l’app. À partir de la version 2.1,
+  tu peux aussi choisir de regarder une pub récompensée (pour réparer une série,
+  gagner un joker ou changer encore de question)&nbsp;: elle ne se lance que si tu
+  touches un bouton marqué PUB, et elle passe par le même SDK de Google, avec les
+  mêmes réglages non personnalisés et les mêmes types de données que les pubs entre
+  les manches. Pour afficher et mesurer les
   publicités et lutter contre la fraude, Google peut recevoir l’adresse IP (qui
   indique une position approximative), des identifiants de l’appareil, des
   informations sur les publicités vues et touchées, ainsi que des diagnostics de
@@ -45,7 +55,7 @@
   Squeeze ne demande jamais l’autorisation de te suivre, et les publicités sont
   limitées à des contenus adaptés à tous les âges. Dans l’EEE, au Royaume-Uni et en
   Suisse, l’outil de consentement de Google te demande ton choix avant toute
-  publicité&nbsp;; tu peux le modifier à tout moment avec le bouton Choix de
+  publicité&#8239;; tu peux le modifier à tout moment avec le bouton Choix de
   confidentialité de l’écran d’accueil. Google traite ces données selon ses propres
   règles&nbsp;:
   <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialité de
@@ -53,6 +63,35 @@
   <a href="https://policies.google.com/technologies/partner-sites?hl=fr">Comment
   Google utilise les informations des sites ou applications qui utilisent ses
   services</a>.</p>
+
+  <h2>Fichier de réglages (version 2.1 et suivantes)</h2>
+  <p>Au lancement, Squeeze télécharge sur ce site un petit fichier de réglages
+  (<a href="../config/v1.json">jjfisherdev.github.io/squeeze-support/config/v1.json</a>)
+  qui peut activer ou désactiver des fonctions et ajuster le jeu, par exemple la
+  question du jour ou le fonctionnement des séries. La requête ne contient aucun
+  identifiant, aucun compte et rien sur toi ni sur tes parties. Comme pour tout site
+  web, l’hébergeur du site, GitHub, reçoit l’adresse IP de ton appareil et les
+  informations techniques habituelles d’une requête (comme son heure) pour livrer le
+  fichier, et peut les conserver dans ses journaux pour des raisons de sécurité,
+  selon la
+  <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement">déclaration
+  de confidentialité de GitHub</a>. Nous ne recevons pas ces journaux. Si le
+  téléchargement échoue, Squeeze utilise simplement ses réglages intégrés.</p>
+
+  <h2>Rappels (facultatifs, version 2.1 et suivantes)</h2>
+  <p>Après ta première question du jour, Squeeze te demande si tu veux un rappel&#8239;;
+  iOS ne demande l’autorisation d’envoyer des notifications que si tu dis oui. Les
+  rappels sont des notifications locales&nbsp;: Squeeze les programme sur ton appareil,
+  avec la question du jour comme texte, un par jour au maximum et jamais entre 22&#8239;h
+  et 8&#8239;h. Aucun service de notifications push ni aucun serveur n’intervient, et rien
+  n’est envoyé. Pour les couper, touche la cloche de l’accueil ou passe par les
+  Réglages d’iOS.</p>
+
+  <h2>Partager ton résultat de la question du jour</h2>
+  <p>PARTAGER ouvre la feuille de partage d’Apple avec une ligne de texte, par
+  exemple «&nbsp;Squeeze · Question du jour n°&nbsp;12 · dedans à ±8&#8239;% · 🔥 5&nbsp;»&nbsp;: ton résultat et ta
+  série, jamais la réponse. C’est toi qui choisis où l’envoyer, ou qui annules.
+  Squeeze n’envoie rien lui-même et ne reçoit rien.</p>
 
   <h2>Vérification de l’âge</h2>
   <p>Certains endroits imposent aux apps de tenir compte de l’âge des joueurs et de
@@ -79,24 +118,32 @@
   <h2>Données stockées sur l’appareil</h2>
   <p>Squeeze garde un peu de données en local pour que le jeu fonctionne&nbsp;: la
   langue, ton choix Au hasard ou Autour de toi et la longueur des matchs, le fait
-  d’avoir vu la manche de démonstration, les compteurs qui espacent les publicités
+  d’avoir vu la manche de démonstration (et, à partir de la version 2.1, si l’app a
+  été téléchargée ou mise à jour depuis une version antérieure, pour qu’une mise à jour
+  ne la rejoue jamais), les compteurs qui espacent les publicités
   (matchs joués, manches depuis la dernière pub, heure de la dernière pub) et, là
   où la vérification de l’âge s’applique, le fait qu’un parent a approuvé les pubs
-  ou non. Ces données restent sur l’appareil, ne sont sauvegardées nulle part chez
+  ou non. À partir de la version 2.1, il garde aussi ta série, tes jokers et tes
+  résultats de la question du jour, ton choix entre deux joueurs et le chien ainsi
+  que le niveau du chien, une estimation de la précision habituelle de tes
+  estimations (pour que le chien joue contre toi à armes égales), l’heure à laquelle
+  tu joues d’habitude la question du jour (pour caler les rappels), ton choix pour
+  les rappels et le dernier fichier de réglages. Ces données restent sur l’appareil, ne sont sauvegardées nulle part chez
   nous et disparaissent quand l’app est supprimée.</p>
 
   <h2>Versions antérieures à la 2.0</h2>
   <p>Squeeze 1.x n’a pas de pub. Si tu y ajoutes une photo à ton perso, tu la
-  choisis avec le sélecteur de photos d’Apple&nbsp;; elle reste uniquement sur
+  choisis avec le sélecteur de photos d’Apple&#8239;; elle reste uniquement sur
   l’appareil et n’est jamais envoyée. Ses photos de fond sont des images Creative
   Commons et du domaine public issues de Wikimedia Commons, créditées sur la page
-  <a href="../credits.html">Crédits photo</a>&nbsp;; elles sont livrées dans l’app et
+  <a href="../credits.html">Crédits photo</a>&#8239;; elles sont livrées dans l’app et
   jamais téléchargées.</p>
 
   <h2>Tiers</h2>
   <p>À partir de la version 2.0, Squeeze intègre le SDK Google Mobile Ads et l’outil
-  de consentement de Google. La vérification de l’âge utilise les frameworks
-  d’Apple, sur l’appareil.</p>
+  de consentement de Google. À partir de la version 2.1, le fichier de réglages est
+  hébergé par GitHub Pages. La vérification de l’âge et les rappels utilisent les
+  frameworks d’Apple, sur l’appareil.</p>
 
   <h2>Enfants</h2>
   <p>Squeeze est un jeu familial adapté à tous les âges, mais il ne s’adresse pas
