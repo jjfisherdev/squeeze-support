@@ -18,5 +18,10 @@
   },
   "notifications": {
     "enabled": true
+  },
+  "ads": {
+    "everyMin": 2,
+    "everyMax": 3,
+    "restSeconds": 180
   }
 }
